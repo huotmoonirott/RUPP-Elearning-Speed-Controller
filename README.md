@@ -3,7 +3,7 @@
 > A userscript that adds video speed controls to the [RUPP Moodle eLearning platform](https://elearning.rupp.edu.kh), so you can watch lectures at your own pace.
 
 ![Version](https://img.shields.io/badge/version-1.2.3-blue)
-![License](https://img.shields.io/badge/license-GNU%20GPLv3-green)
+![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Chrome%20%7C%20Firefox%20%7C%20Edge-lightgrey)
 ![Site](https://img.shields.io/badge/site-elearning.rupp.edu.kh-orange)
 
@@ -18,6 +18,7 @@
   - [Step 1: Install a Userscript Manager](#step-1-install-a-userscript-manager)
   - [Step 2: Enable Developer Mode & Allow User Scripts](#step-2-enable-developer-mode--allow-user-scripts-chrome--edge--brave-only)
   - [Step 3: Install the Script](#step-3-install-the-script)
+- [ការណែនាំអំពីការតម្លើង (Khmer Installation Guide)](#-ការណែនាំអំពីការតម្លើង-khmer-installation-guide)
 - [Browser-by-Browser Setup](#-browser-by-browser-setup)
   - [Chrome](#chrome)
   - [Firefox](#firefox)
@@ -121,11 +122,19 @@ Chromium-based browsers need **two things** enabled: Developer Mode on the exten
 
 This is the step most people miss. Even with Developer Mode ON, Tampermonkey won't run scripts unless **Allow User Scripts** is explicitly enabled.
 
-1. Click the **Tampermonkey icon** in your browser toolbar
-2. Click the **three-dot menu (⋮)** on the Tampermonkey icon
-3. Select **"Manage Extension"**
-4. Scroll down to find **"Allow User Scripts"**
-5. Toggle it **ON**
+**Fastest way — click your browser's direct link below.** It takes you straight to Tampermonkey's details page — no menus needed:
+
+| Browser | Direct Link |
+|---------|-------------|
+| Chrome  | [chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+| Edge    | [edge://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo](edge://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+| Brave   | [brave://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo](brave://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+
+> 📌 These are internal browser links (`chrome://`, `edge://`, `brave://`), so clicking them from a PDF or some chat apps may not work — if so, just copy and paste the link into your address bar.
+
+Once you're there, scroll down and toggle **"Allow User Scripts"** to **ON**.
+
+*(Manual route if the link doesn't work: click the **Tampermonkey icon → ⋮ → "Manage Extension"**, then scroll down to find the same toggle.)*
 
 > ⚠️ Without this toggle, Tampermonkey is installed but completely silent — no scripts will run, no errors shown. This is the most common reason the speed panel doesn't appear.
 
@@ -153,6 +162,76 @@ Click **"Install"** in the dialog that appears. Done!
 4. Copy the full contents of [`rupp.user.js`](./rupp.user.js) and paste it in
 5. Press **Ctrl+S** (Windows/Linux) or **Cmd+S** (Mac) to save
 6. Done — the script is now active!
+
+---
+
+## 🇰🇭 ការណែនាំអំពីការតម្លើង (Khmer Installation Guide)
+
+ដើម្បីឱ្យ Script នេះដំណើរការ អ្នកត្រូវការពីរយ៉ាង៖ Userscript Manager (កម្មវិធីគ្រប់គ្រង Script) និង Script ខ្លួនវាផ្ទាល់។ សូមអនុវត្តតាមជំហានខាងក្រោម៖
+
+### ជំហានទី ១៖ តម្លើង Userscript Manager
+
+អ្នកត្រូវតម្លើង **Tampermonkey** ដែលជា Extension ដ៏ពេញនិយម និងមានសុវត្ថិភាពបំផុតសម្រាប់ Browser របស់អ្នក៖
+
+| Browser | តំណភ្ជាប់សម្រាប់តម្លើង (Install Link) |
+|---------|-------------|
+| Chrome  | [Tampermonkey on Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+| Firefox | [Tampermonkey on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) |
+| Edge    | [Tampermonkey on Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd) |
+| Brave   | [Tampermonkey on Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+
+### ជំហានទី ២៖ បើកមុខងារ Developer Mode និង Allow User Scripts
+
+*(សម្រាប់អ្នកប្រើប្រាស់ Chrome, Edge និង Brave ប៉ុណ្ណោះ។ បើអ្នកប្រើ Firefox សូមរំលងជំហាននេះ)*
+
+ដើម្បីឱ្យ Tampermonkey ដំណើរការបាន អ្នកត្រូវបើកសិទ្ធិពីរយ៉ាង៖
+
+**2a — បើក Developer Mode**
+
+- **Chrome:** ចូលទៅកាន់ `chrome://extensions` រួចចុចបើក **"Developer mode"** (នៅជ្រុងខាងស្តាំលើ)
+- **Edge:** ចូលទៅកាន់ `edge://extensions` រួចចុចបើក **"Developer mode"** (នៅជ្រុងខាងឆ្វេងក្រោម)
+- **Brave:** ចូលទៅកាន់ `brave://extensions` រួចចុចបើក **"Developer mode"** (នៅជ្រុងខាងស្តាំលើ)
+
+**2b — បើក Allow User Scripts (ជំហានដ៏សំខាន់បំផុត)** ⚠️
+
+ទោះបើក Developer Mode រួចហើយ ក៏វានៅមិនទាន់ដំណើរការដែរ ប្រសិនបើអ្នកមិនទាន់បើកមុខងារនេះ៖
+
+**វិធីលឿនបំផុត — ចុចលើ Link ខាងក្រោម ដោយផ្អែកលើ Browser របស់អ្នក។** វានឹងនាំអ្នកទៅផ្ទាល់ទំព័ររបស់ Tampermonkey ដោយមិនចាំបាច់ចុចចូល Menu ច្រើនជំហានទេ៖
+
+| Browser | Link ផ្ទាល់ |
+|---------|-------------|
+| Chrome  | [chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+| Edge    | [edge://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo](edge://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+| Brave   | [brave://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo](brave://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+
+> 📌 បើ Link មិនដំណើរការ (ឧទាហរណ៍ បើកពី PDF ឬកម្មវិធី Chat ខ្លះ) សូម Copy Link ហើយយកទៅ Paste ក្នុង Address Bar របស់ Browser ដោយផ្ទាល់។
+
+នៅពេលចូលដល់ទំព័រនោះ សូមរមូរចុះក្រោម រួចចុច Toggle **"Allow User Scripts"** ឱ្យទៅជា **ON**។
+
+*(បើ Link មិនដំណើរការ អ្នកអាចចូលដោយដៃវិញ៖ ចុចលើរូបតំណាង Tampermonkey → ⋮ → "Manage Extension" រួចរមូរចុះក្រោមរកប៊ូតុងដូចគ្នា)*
+
+### ជំហានទី ៣៖ តម្លើង Script
+
+អ្នកមានពីរជម្រើសក្នុងការតម្លើង៖
+
+**ជម្រើសទី A — តម្លើងដោយស្វ័យប្រវត្តិ (ងាយស្រួលបំផុត):**
+
+គ្រាន់តែចុចលើ Link ខាងក្រោមនេះ៖
+
+```
+https://raw.githubusercontent.com/huotmoonirott/rupp-elearning-tools/main/rupp.user.js
+```
+
+ផ្ទាំង Install នឹងលោតឡើងដោយស្វ័យប្រវត្តិ។ សូមចុចប៊ូតុង **"Install"** ជាការស្រេច។
+
+**ជម្រើសទី B — តម្លើងដោយដៃ (Manual install):**
+
+1. ចុចលើរូបតំណាង **Tampermonkey** នៅលើ Browser toolbar
+2. ជ្រើសរើស **"Create a new script"**
+3. លុប Code ចាស់ៗដែលមាននៅក្នុងនោះចេញឱ្យអស់
+4. កូពី (Copy) កូដទាំងអស់ពី `rupp.user.js` យកមកដាក់ (Paste) ក្នុងនោះ
+5. ចុច **Ctrl+S** (Windows/Linux) ឬ **Cmd+S** (Mac) ដើម្បីរក្សាទុក (Save)
+6. ចប់ហើយ — Script ដំណើរការហើយ!
 
 ---
 
@@ -228,7 +307,7 @@ Turbo Mode stops automatically when you select a lower speed, the video ends, or
 
 **Chrome/Edge/Brave: script doesn't run at all**
 - Make sure Developer Mode is ON in your extensions page (`chrome://extensions`, `edge://extensions`, or `brave://extensions`)
-- **Also check:** click the **Tampermonkey icon** → **three-dot menu (⋮)** → **"Manage Extension"** → scroll down → make sure **"Allow User Scripts"** is toggled ON — this is the most commonly missed step
+- **Also check:** use the direct link for your browser in [Step 2b](#step-2-enable-developer-mode--allow-user-scripts-chrome--edge--brave-only) and make sure **"Allow User Scripts"** is toggled ON — this is the most commonly missed step
 - Reload the page after enabling both settings
 
 **Speed resets to 1x when a new video loads**
@@ -262,7 +341,7 @@ Please test in both Chrome and Firefox before submitting.
 
 ## 📄 License
 
-This project is licensed under the **GNU General Public License v3.0**.
+This project is licensed under the **MIT License**.
 See the [LICENSE](./LICENSE) file for full terms.
 
 ---
