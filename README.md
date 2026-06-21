@@ -147,7 +147,7 @@ Once you're there, scroll down and toggle **"Allow User Scripts"** to **ON**.
 Click the raw script link below. Tampermonkey will detect it and show an install dialog automatically:
 
 ```
-https://raw.githubusercontent.com/huotmoonirott/rupp-elearning-tools/main/rupp.user.js
+https://raw.githubusercontent.com/huotmoonirott/RUPP-Elearning-Speed-Controller/main/rupp.user.js
 ```
 
 Click **"Install"** in the dialog that appears. Done!
@@ -219,7 +219,7 @@ Click **"Install"** in the dialog that appears. Done!
 គ្រាន់តែចុចលើ Link ខាងក្រោមនេះ៖
 
 ```
-https://raw.githubusercontent.com/huotmoonirott/rupp-elearning-tools/main/rupp.user.js
+https://raw.githubusercontent.com/huotmoonirott/RUPP-Elearning-Speed-Controller/main/rupp.user.js
 ```
 
 ផ្ទាំង Install នឹងលោតឡើងដោយស្វ័យប្រវត្តិ។ សូមចុចប៊ូតុង **"Install"** ជាការស្រេច។
